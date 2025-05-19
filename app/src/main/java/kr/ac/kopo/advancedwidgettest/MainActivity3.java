@@ -29,5 +29,9 @@ public class MainActivity3 extends AppCompatActivity {
         MultiAutoCompleteTextView multi = findViewById(R.id.multi);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, items);
+
+        MultiAutoCompleteTextView.CommaTokenizer commaToken = new MultiAutoCompleteTextView.CommaTokenizer();
+        multi.setTokenizer(commaToken);
+        multi.setAdapter(adapter);
     }
 }
